@@ -1,0 +1,21 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+.idea
+.vs
+/.idea/
+/.idea/.idea.Postgres Docker/.idea/dataSources/c3d8e688-b14e-4475-a17d-51aca65b5442/storage_v2/_src_/database/test-db.mU82qw/schema/information_schema.FNRwLQ.meta
+/.idea/.idea.Postgres Docker/.idea/dataSources/c3d8e688-b14e-4475-a17d-51aca65b5442/storage_v2/_src_/database/test-db.mU82qw/schema/pg_catalog.0S1ZNQ.meta
+/.idea/.idea.Postgres Docker/.idea/dataSources/c3d8e688-b14e-4475-a17d-51aca65b5442/storage_v2/_src_/database/test-db.mU82qw.meta
+/.idea/.idea.Postgres Docker/.idea/codeStyles/codeStyleConfig.xml
+/.idea/.idea.Postgres Docker/.idea/.name
+/.idea/.idea.Postgres Docker/.idea/dataSources/68a7924c-d909-4b08-8a64-6d9143106103.xml
+/.idea/.idea.Postgres Docker/.idea/dataSources/68a7924c-d909-4b08-8a64-6d9143106103/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta
+/.idea/.idea.Postgres Docker/.idea/dataSources/68a7924c-d909-4b08-8a64-6d9143106103/storage_v2/_src_/database/test-db.mU82qw/schema/information_schema.FNRwLQ.meta
+/.idea/.idea.Postgres Docker/.idea/dataSources/68a7924c-d909-4b08-8a64-6d9143106103/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta
+/.idea/.idea.Postgres Docker/.idea/dataSources/68a7924c-d909-4b08-8a64-6d9143106103/storage_v2/_src_/database/test-db.mU82qw/schema/pg_catalog.0S1ZNQ.meta
+/.idea/.idea.Postgres Docker/.idea/dataSources/68a7924c-d909-4b08-8a64-6d9143106103/storage_v2/_src_/database/postgres.edMnLQ.meta
+/.idea/.idea.Postgres Docker/.idea/dataSources/68a7924c-d909-4b08-8a64-6d9143106103/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta
+/.idea/.idea.Postgres Docker/.idea/dataSources/68a7924c-d909-4b08-8a64-6d9143106103/storage_v2/_src_/database/test-db.mU82qw.meta

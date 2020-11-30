@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "orchestration", "orchestration", "{BBDFC624-EDEA-492C-B271-0686B0722FDA}"
+ProjectSection(SolutionItems) = preProject
+	docker-compose-postgres.yml = docker-compose-postgres.yml
+	README.md = README.md
+	docker-compose.yml = docker-compose.yml
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL_EF5Core_API", "GraphQL_EF5Core_API\GraphQL_EF5Core_API.csproj", "{3EF363A4-9FBE-4A72-8630-5416010D6896}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EF363A4-9FBE-4A72-8630-5416010D6896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF363A4-9FBE-4A72-8630-5416010D6896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF363A4-9FBE-4A72-8630-5416010D6896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF363A4-9FBE-4A72-8630-5416010D6896}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
