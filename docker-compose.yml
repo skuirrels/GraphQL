@@ -11,7 +11,7 @@ services:
     image: rocts/pgskuirrel
     build:
       context: .
-      dockerfile: ./EF5_Core_API/Dockerfile
+      dockerfile: ./GraphQL_EF5Core_API/Dockerfile
     restart: always
     ports: 
       - "6060:6060"

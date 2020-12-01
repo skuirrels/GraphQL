@@ -32,6 +32,12 @@ namespace GraphQL_EF5Core_API
         {
             services.AddControllers();
             
+            // services.AddControllers()
+            //     .AddJsonOptions(options =>
+            //     {
+            //         options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+            //     });
+            
             // Use Docker ConnectionString Param or fallback to the connnectionstring is appsettings.json
             var connectionString = Configuration["APP_CONNECTIONSTRING"] ??
                                    Configuration.GetConnectionString("PostgresConnection");
