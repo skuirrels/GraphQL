@@ -21,5 +21,9 @@ Add GraphQL
 
 Add an initial migration
 - dotnet ef migrations add "Initial" --context Context --verbose
-  
+
+
+Add Automapper
+- dotnet add package Automapper
+- dotnet add package Automapper.Extensions.Microsoft.DependencyInjection
 

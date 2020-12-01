@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GraphQL_EF5Core_API.DataSeeder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -24,8 +25,9 @@ namespace GraphQL_EF5Core_API
         {
             using (var scope = host.Services.CreateScope())
             {
-                var db = scope.ServiceProvider.GetRequiredService<Context>();
+                var db = scope.ServiceProvider.GetRequiredService<OrderContext>();
                 db.Database.Migrate();
+                db.Seed();
             }
         }
 

@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using AutoMapper;
 using Convey;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,14 +31,18 @@ namespace GraphQL_EF5Core_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
             // Use Docker ConnectionString Param or fallback to the connnectionstring is appsettings.json
             var connectionString = Configuration["APP_CONNECTIONSTRING"] ??
                                    Configuration.GetConnectionString("PostgresConnection");
 
-            services.AddDbContext<Context>(x =>
-                x.UseNpgsql(connectionString, m => m.MigrationsAssembly(typeof(Context).Assembly.FullName)));
+            services.AddDbContext<OrderContext>(x =>
+                x.UseNpgsql(connectionString, m => m.MigrationsAssembly(typeof(OrderContext).Assembly.FullName)));
 
             services.AddConvey();
+
+            services.AddAutoMapper(typeof(Startup));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
