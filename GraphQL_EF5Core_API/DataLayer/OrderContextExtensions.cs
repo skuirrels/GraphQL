@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using GraphQL_EF5Core_API.DomainModels;
 
-namespace GraphQL_EF5Core_API.DataSeeder
+namespace GraphQL_EF5Core_API.DataLayer
 {
     public static class SeedOrders
     {
@@ -18,6 +18,7 @@ namespace GraphQL_EF5Core_API.DataSeeder
                     OrderNumber = "PO111",
                     Buyer = "Skuirrels Inc",
                     Supplier = "Tails Corp",
+                    Status = OrderStatus.Provisional,
                     OrderLines = new List<OrderLine>
                     {
                         new OrderLine
@@ -45,6 +46,7 @@ namespace GraphQL_EF5Core_API.DataSeeder
                     OrderNumber = "PO112",
                     Buyer = "Skuirrels Inc",
                     Supplier = "Tails Corp",
+                    Status = OrderStatus.Provisional,
                     OrderLines = new List<OrderLine>
                     {
                         new OrderLine
@@ -72,6 +74,7 @@ namespace GraphQL_EF5Core_API.DataSeeder
                     OrderNumber = "PO113",
                     Buyer = "Skuirrels Inc",
                     Supplier = "Tails Corp",
+                    Status = OrderStatus.Provisional,
                     OrderLines = new List<OrderLine>
                     {
                         new OrderLine
@@ -99,6 +102,7 @@ namespace GraphQL_EF5Core_API.DataSeeder
                     OrderNumber = "PO114",
                     Buyer = "Skuirrels Inc",
                     Supplier = "Tails Corp",
+                    Status = OrderStatus.Provisional,
                     OrderLines = new List<OrderLine>
                     {
                         new OrderLine

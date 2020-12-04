@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using GraphQL_EF5Core_API.DataLayer;
 using GraphQL_EF5Core_API.DomainModels;
 using GraphQL_EF5Core_API.Resources;
 using Microsoft.AspNetCore.Mvc;

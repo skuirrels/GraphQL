@@ -12,7 +12,7 @@ namespace GraphQL_EF5Core_API.DomainModels
         [Required, StringLength(50)]
         public string OrderNumber { get; set; }
 
-        public OrderStatus Status { get; set; }
+        public OrderStatus Status { get; set; } = OrderStatus.Provisional;
         
         [StringLength(50)]
         public string Buyer { get; set; }

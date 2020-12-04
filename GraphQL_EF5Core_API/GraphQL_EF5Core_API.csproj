@@ -4,12 +4,15 @@
         <TargetFramework>net5.0</TargetFramework>
         <UserSecretsId>3b098ccd-cf1c-4904-be0f-df4875173095</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Automapper" Version="10.1.1" />
       <PackageReference Include="Automapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
       <PackageReference Include="convey" Version="0.4.403" />
+      <PackageReference Include="HotChocolate.AspNetCore" Version="11.0.0" />
+      <PackageReference Include="HotChocolate.Data.EntityFramework" Version="11.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

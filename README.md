@@ -27,3 +27,6 @@ Add Automapper
 - dotnet add package Automapper
 - dotnet add package Automapper.Extensions.Microsoft.DependencyInjection
 
+Add HotChocolate
+- dotnet add package HotChocolate.AspNetCore
+- dotnet add package HotChocolate.Data.EntityFramework

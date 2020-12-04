@@ -7,6 +7,9 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using AutoMapper;
 using Convey;
+using GraphQL_EF5Core_API.DataLayer;
+using GraphQL_EF5Core_API.Resolvers;
+using GraphQL_EF5Core_API.Resources;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -41,13 +44,21 @@ namespace GraphQL_EF5Core_API
             // Use Docker ConnectionString Param or fallback to the connnectionstring is appsettings.json
             var connectionString = Configuration["APP_CONNECTIONSTRING"] ??
                                    Configuration.GetConnectionString("PostgresConnection");
-
-            services.AddDbContext<OrderContext>(x =>
-                x.UseNpgsql(connectionString, m => m.MigrationsAssembly(typeof(OrderContext).Assembly.FullName)));
+            
+            // services.AddDbContext<OrderContext>(x =>
+            //     x.UseNpgsql(connectionString, m => m.MigrationsAssembly(typeof(OrderContext).Assembly.FullName)));
+            
+            services.AddDbContextPool<OrderContext>(o =>
+                o.UseNpgsql(connectionString,m => m.MigrationsAssembly(typeof(OrderContext).Assembly.FullName)));
+                
 
             services.AddConvey();
 
             services.AddAutoMapper(typeof(Startup));
+
+            services.AddGraphQLServer()
+                .AddQueryType<OrderQuery>()
+                .AddMutationType<OrderMutation>();
 
         }
 
@@ -60,8 +71,12 @@ namespace GraphQL_EF5Core_API
             }
 
             app.UseRouting();
-
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+                endpoints.MapGraphQL(); 
+            });
         }
     }
 }
