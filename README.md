@@ -13,7 +13,7 @@ How to setup Postgres within Docker
 
 Make sure to install or update to the latest dotnet ef tools
 
-dotnet tool install --global dotnet-ef
+dotnet tool install --global dotnet-ef \
 dotnet tool update --global dotnet-ef
 
 Add GraphQL
@@ -30,3 +30,5 @@ Add Automapper
 Add HotChocolate
 - dotnet add package HotChocolate.AspNetCore
 - dotnet add package HotChocolate.Data.EntityFramework
+
+Banana Cake Pop is available at: http://localhost:5002/graphql/ 

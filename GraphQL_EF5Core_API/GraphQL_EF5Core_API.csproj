@@ -9,17 +9,17 @@
 
     <ItemGroup>
       <PackageReference Include="Automapper" Version="10.1.1" />
-      <PackageReference Include="Automapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
-      <PackageReference Include="convey" Version="0.4.403" />
-      <PackageReference Include="HotChocolate.AspNetCore" Version="11.0.0" />
-      <PackageReference Include="HotChocolate.Data.EntityFramework" Version="11.0.0" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
+      <PackageReference Include="Automapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+      <PackageReference Include="convey" Version="0.5.433" />
+      <PackageReference Include="HotChocolate.AspNetCore" Version="11.0.9" />
+      <PackageReference Include="HotChocolate.Data.EntityFramework" Version="11.0.9" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
-      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.0" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.2" />
     </ItemGroup>
 
     <ItemGroup>
