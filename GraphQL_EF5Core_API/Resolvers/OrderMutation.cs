@@ -16,7 +16,7 @@ namespace GraphQL_EF5Core_API.Resolvers
                 Supplier = input.Supplier
             };
 
-            context.Orders.Add(order);
+            await context.Orders.AddAsync(order);
             await context.SaveChangesAsync();
 
             return new AddOrderPayload(order);

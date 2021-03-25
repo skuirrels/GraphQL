@@ -11,6 +11,7 @@
       <PackageReference Include="Automapper" Version="10.1.1" />
       <PackageReference Include="Automapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
       <PackageReference Include="convey" Version="0.5.433" />
+      <PackageReference Include="GraphQL.Server.Ui.Voyager" Version="5.0.0" />
       <PackageReference Include="HotChocolate.AspNetCore" Version="11.0.9" />
       <PackageReference Include="HotChocolate.Data.EntityFramework" Version="11.0.9" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />

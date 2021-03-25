@@ -24,7 +24,7 @@ namespace GraphQL_EF5Core_API.DomainModels
 
     public enum OrderStatus
     {
-        Cancelled =0,
+        Cancelled = 0,
         Provisional = 1,
         Confirmed = 10,
         Shipped = 20,

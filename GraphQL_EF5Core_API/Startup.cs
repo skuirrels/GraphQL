@@ -7,6 +7,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using AutoMapper;
 using Convey;
+using GraphQL.Server.Ui.Voyager;
 using GraphQL_EF5Core_API.DataLayer;
 using GraphQL_EF5Core_API.Resolvers;
 using GraphQL_EF5Core_API.Resources;
@@ -45,13 +46,12 @@ namespace GraphQL_EF5Core_API
             var connectionString = Configuration["APP_CONNECTIONSTRING"] ??
                                    Configuration.GetConnectionString("PostgresConnection");
             
-            // services.AddDbContext<OrderContext>(x =>
-            //     x.UseNpgsql(connectionString, m => m.MigrationsAssembly(typeof(OrderContext).Assembly.FullName)));
-            
-            services.AddDbContextPool<OrderContext>(o =>
+            services.AddPooledDbContextFactory<OrderContext>(o =>
                 o.UseNpgsql(connectionString,m => m.MigrationsAssembly(typeof(OrderContext).Assembly.FullName)));
-                
-
+            
+            // Used for the migrations
+            services.AddTransient<OrderContext>();
+            
             services.AddConvey();
 
             services.AddAutoMapper(typeof(Startup));
@@ -76,7 +76,10 @@ namespace GraphQL_EF5Core_API
             {
                 endpoints.MapControllers();
                 endpoints.MapGraphQL(); 
+                endpoints.MapGraphQLVoyager();
             });
+
+            app.UseGraphQLVoyager();
         }
     }
 }
